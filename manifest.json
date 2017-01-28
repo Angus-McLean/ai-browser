@@ -8,16 +8,14 @@
 	},
 	"background": {
 		"scripts": [
-
+			"/background/index.js"
 		]
 	},
 	"content_scripts": [
 		{
 			"matches": ["http://*/*", "https://*/*"],
 			"js": [
-				"content/simulate.js",
-				"content/injectevents.js",
-				"content/main.js"
+				"/content/inject_events.js"
 			],
 			"run_at": "document_start"
 		}

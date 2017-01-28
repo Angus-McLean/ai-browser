@@ -1,13 +1,15 @@
 
-                          AI Browser
+# AI Browser
+> Surfin' the interwebs with voice and AI
 
-			Surfin' the interwebs with voice and AI
 
-  What is it?
-  -----------
+##Overview
+- Perform basic browser navigation actions
+- Interact with different websites naturally
+- Easily train the AI to browser smarter
 
-  Leverages Nuance Voice Recognition and Mix.nlu for
-
-  Overview
-  --------
-  
+## Structure
+- Background script listens to audio and recognizes text
+- The text is taken and then sent to Mix.nlu for interpretation
+- Interpretation is done on a number of models simultaneously
+- 
