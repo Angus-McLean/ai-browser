@@ -1,0 +1,35 @@
+{
+	"name": "ai-browser",
+	"description": "Surfin' the interwebs with voice and AI",
+	"version": "0.0.0.1",
+	"manifest_version": 2,
+	"icons": {
+
+	},
+	"background": {
+		"scripts": [
+
+		]
+	},
+	"content_scripts": [
+		{
+			"matches": ["http://*/*", "https://*/*"],
+			"js": [
+				"content/simulate.js",
+				"content/injectevents.js",
+				"content/main.js"
+			],
+			"run_at": "document_start"
+		}
+	],
+	"permissions": [
+		"tabs", "http://*/*", "activeTab", "storage", "debugger"
+	],
+	"web_accessible_resources": [
+
+	],
+	"browser_action": {
+		"default_title": "Buzify",
+		"default_popup": "public/index.html"
+	}
+}

@@ -1,0 +1,22 @@
+{
+  "name": "ai-browser",
+  "homepage": "https://github.com/Angus-McLean/ai-browser",
+  "authors": [
+    "Angus McLean <angus.mclean@mail.mcgill.ca>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.1"
+  }
+}
