@@ -2,9 +2,9 @@
 	angular.module('app')
 		.controller('trainCtrl', trainCtrl);
 
-	trainCtrl.$inject = ['$scope', '$timeout', '$mdSidenav', '$log', 'ChromeMessage', 'Trainer'];
+	trainCtrl.$inject = ['$scope', '$timeout', '$mdSidenav', '$log', 'ChromeMessage', 'Trainer', '$mdDialog'];
 
-	function trainCtrl($scope, $timeout, $mdSidenav, $log, ChromeMessage, Trainer) {
+	function trainCtrl($scope, $timeout, $mdSidenav, $log, ChromeMessage, Trainer, $mdDialog) {
 		var ref = firebase.database().ref();
 		var _timeout;
 
@@ -56,11 +56,37 @@
 					query : localStorage.getItem('query'),
 					date_created : Date.now()
 				});
-				Trainer.demonstrations.$add(demoData);
+				confirmTraining(demoData);
 			});
 			$scope.demoing = false;
 			$scope.demoMessage = 'Start Demonstration';
 		};
+
+		function updateTrainingData(demoData) {
+
+			Trainer.demonstrations.$add(demoData);
+			$scope.query = '';
+			localStorage.setItem('query', $scope.query);
+		}
+
+		function confirmTraining(trainingData) {
+			var json = JSON.parse(JSON.stringify(trainingData));
+			json.events.forEach(function (inputEv) {
+				inputEv.path = (inputEv.path.match(/\> ?[^>]+$/)||[inputEv.path])[0];
+			});
+
+			var confirm = $mdDialog.confirm()
+				.title('Does this look about right?')
+				.textContent(JSON.stringify(json, null, 3))
+				.ok('Yep!')
+				.cancel('No');
+
+			$mdDialog.show(confirm).then(function() {
+				updateTrainingData(trainingData);
+			}, function() {
+
+			});
+		}
 
 	}
 })();

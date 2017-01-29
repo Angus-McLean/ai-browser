@@ -41,7 +41,10 @@ var DEMO_RUNNING = false;
 			events_log = [];
 			sendResp();
 		} else if (msg.type === 'demo_end') {
-			sendResp(events_log);
+			var traingingObj = {
+				events : events_log
+			};
+			sendResp(traingingObj);
 			DEMO_RUNNING = false;
 			events_log = false;
 		} else if (msg.type === 'demo_query') {
