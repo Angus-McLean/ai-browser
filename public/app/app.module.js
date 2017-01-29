@@ -1,3 +1,3 @@
 (function () {
-	angular.module( 'app', [ 'ngMaterial', 'ui.router'] );
+	angular.module( 'app', [ 'ngMaterial', 'ui.router', 'firebase'] );
 })()

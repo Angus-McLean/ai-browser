@@ -4,7 +4,9 @@
 	"version": "0.0.0.1",
 	"manifest_version": 2,
 	"icons": {
-
+		"16": "public/img/lightbulb_outline.png",
+       "48": "public/img/lightbulb_outline.png",
+      "128": "public/img/AI-Browser.png"
 	},
 	"background": {
 		"scripts": [

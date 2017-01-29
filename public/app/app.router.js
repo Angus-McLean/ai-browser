@@ -25,7 +25,16 @@
 				display : 'Documentation',
 				url: '/docs',
 				templateUrl: '/public/app/views/docs.view.html',
-				controller : 'trainCtrl'
+				controller : 'docsCtrl'
 			});
+
+		var config = {
+			apiKey: "AIzaSyBLM2qYZ0h1zJPNXdTL1EJcVfCGecV9Lqo",
+			authDomain: "ai-browser.firebaseapp.com",
+			databaseURL: "https://ai-browser.firebaseio.com",
+			storageBucket: "ai-browser.appspot.com",
+			messagingSenderId: "966241872258"
+		};
+		firebase.initializeApp(config);
 	}
 })();

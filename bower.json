@@ -22,6 +22,7 @@
     "angular-ui-router": "^0.4.2",
     "lodash": "^4.17.4",
     "Fuse": "https://github.com/krisk/Fuse",
-    "fuse.js": "^2.6.1"
+    "fuse.js": "^2.6.1",
+    "angularfire": "^2.3.0"
   }
 }
