@@ -14,6 +14,7 @@
 - git clone the repo
 - Chrome > Settings > Extensions > Developer Mode
 - Load unpacked extension
+- Happy Browsing :)
 
 ## App Structure
 - Background script listens to audio and recognizes text
