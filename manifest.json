@@ -16,7 +16,7 @@
 			"/libs/nuance.js",
 			"/libs/mix_nlu.js",
 			"/actions/nuance.api.js",
-			"/actions/globalized.background.js",
+			"/actions/background.actions.js",
 			"/background/background.js"
 		]
 	},
@@ -24,7 +24,11 @@
 		{
 			"matches": ["http://*/*", "https://*/*"],
 			"js": [
-				"/content/inject_events.js"
+				"/bower_components/lodash/dist/lodash.js",
+				"/bower_components/fuse.js/src/fuse.js",
+				"/content/inject_events.js",
+				"/content/input.actions.js",
+				"/content/record_events.js"
 			],
 			"run_at": "document_start"
 		}

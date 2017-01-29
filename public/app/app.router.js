@@ -20,6 +20,12 @@
 				url: '/train',
 				templateUrl: '/public/app/views/train.view.html',
 				controller : 'trainCtrl'
+			})
+			.state('docs', {
+				display : 'Documentation',
+				url: '/docs',
+				templateUrl: '/public/app/views/docs.view.html',
+				controller : 'trainCtrl'
 			});
 	}
 })();

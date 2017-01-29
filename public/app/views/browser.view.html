@@ -6,7 +6,7 @@
 			<div layout="row">
 				<md-input-container style="width:350px;">
 					<label>AI Action</label>
-					<input ng-model="query" class="md-block">
+					<input id="query-input" ng-model="query" class="md-block">
 				</md-input-container>
 				<md-button ng-click="interpret()">
 					Interpret
@@ -25,7 +25,7 @@
 			<md-button class="md-fab" aria-label="Eat cake">
 				<md-icon class"avatar md-raised" md-font-set="material-icons">mic</md-icon>
 			</md-button>
-			Start Continuous
+			Start Continuous Mode
 		</div>
 		<!-- <div layout="column" layout-align="center center">
 			<md-switch ng-model="continuous" aria-label="Continuous Input">

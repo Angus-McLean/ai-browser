@@ -24,10 +24,17 @@
 				if(typeof fn === 'function') {
 					fn.apply(null, req.params.concat(function (asyncResp) {
 						console.log('Got rpc response', asyncResp);
-						sendResponse(asyncResp);
+						routeToHandlers(asyncResp);
 					}));
 				}
 			}
 			return true;
 		});
+
+	function routeToHandlers(mixIntentObj) {
+		var actionName = mixIntentObj.action.intent.value;
+		if(AI_Browser.actions[actionName]) {
+			AI_Browser.actions[actionName](mixIntentObj);
+		}
+	}
 })(this);

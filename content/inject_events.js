@@ -41,8 +41,8 @@
 	}
 
 	// receive CyphorInputEvents and trigger fake input
-	document.addEventListener('CyphorInputEvent', function (cyphorEvent) {
-		console.log('received CyphorInputEvent', cyphorEvent);
+	document.addEventListener('InjectInputEvent', function (cyphorEvent) {
+		console.log('received InjectInputEvent', cyphorEvent);
 
 		overwriteValue = cyphorEvent.detail;
 

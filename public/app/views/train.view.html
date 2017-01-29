@@ -15,9 +15,10 @@
 	<div layout="row" layout-align="space-around center" style="width:90%;">
 		<div layout="column" layout-align="center center">
 			<md-button class="md-fab" aria-label="Eat cake">
-				<md-icon class"avatar md-raised" md-font-set="material-icons">lightbulb_outline</md-icon>
+				<md-icon ng-hide="demoing" ng-click="startDemo()" class"avatar md-raised" md-font-set="material-icons">lightbulb_outline</md-icon>
+				<md-icon ng-hide="!demoing" ng-click="stopDemo()" class"avatar md-raised" md-font-set="material-icons">done</md-icon>
 			</md-button>
-			Start Demonstration
+			{{demoMessage}}
 		</div>
 		<!-- <div layout="column" layout-align="center center">
 			<md-switch ng-model="continuous" aria-label="Continuous Input">

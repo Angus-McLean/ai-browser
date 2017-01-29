@@ -19,7 +19,18 @@
 				prom.then(function (resp) {
 					console.log(resp);
 				});
+				$scope.query = '';
 			}
 		};
+
+		$timeout(function () {
+			var inp = document.getElementById('query-input');
+			inp.focus();
+			inp.addEventListener('keypress', function (ev) {
+				if(ev.which === 13) {
+					$scope.$apply($scope.interpret);
+				}
+			});
+		}, 100);
 	}
 })();

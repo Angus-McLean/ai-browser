@@ -22,10 +22,16 @@
 			return def.promise;
 		}
 
+		function sendCurrent(msg, cb) {
+			chrome.tabs.query({active:true, currentWindow:true}, function (tabs) {
+				chrome.tabs.sendMessage(tabs[0].id, msg, cb);
+			});
+		}
 
 		return {
 			sendRPC : sendRPC,
-			send : send
+			send : send,
+			sendCurrent : sendCurrent
 		};
 	}
 })();
