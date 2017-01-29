@@ -4,12 +4,13 @@
 
 ![](/public/img/ai.gif)
 
-##Overview
+##Sale Pitch
 - Perform basic browser navigation actions
-- Interact with different websites naturally
-- Easily train the AI to browser smarter
+- Interact with each website a little differently
+- Is the AI missing something? Teach it your self!
+- Tell it what you want to do and then demonstrate how to do it!
 
-## Structure
+## App Structure
 - Background script listens to audio and recognizes text
 - The text is taken and then sent to Mix.nlu for interpretation
 - Interpretation is done on a number of models simultaneously
