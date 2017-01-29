@@ -12,6 +12,7 @@
 
 ## Try it out!
 - git clone the repo
+- bower install
 - Chrome > Settings > Extensions > Developer Mode
 - Load unpacked extension
 - Happy Browsing :)
