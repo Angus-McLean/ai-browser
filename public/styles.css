@@ -1,0 +1,12 @@
+html {
+	width: 600px;
+	height: 400px;
+}
+
+md-sidenav,
+md-sidenav.md-locked-open,
+md-sidenav.md-closed.md-locked-open-add-active {
+   width: 150px !important;
+   min-width: 150px !important;
+   max-width: 150px !important;
+ }

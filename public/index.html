@@ -3,8 +3,67 @@
 	<head>
 		<meta charset="utf-8">
 		<title>AI Browser</title>
+		<link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="/public/styles.css">
+
+		<script src="/bower_components/angular/angular.js"></script>
+		<script src="/bower_components/angular-aria/angular-aria.js"></script>
+		<script src="/bower_components/angular-animate/angular-animate.js"></script>
+		<script src="/bower_components/angular-material/angular-material.js"></script>
+		<script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+		<script src="/public/app/app.module.js" charset="utf-8"></script>
+		<script src="/public/app/app.router.js" charset="utf-8"></script>
+		<script src="/public/app/app.controller.js" charset="utf-8"></script>
+		<script src="/public/app/controllers/browser.controller.js" charset="utf-8"></script>
+		<script src="/public/app/controllers/train.controller.js" charset="utf-8"></script>
 	</head>
-	<body>
-		
+	<body ng-cloak layout="column" ng-app="app" ng-controller="mainCtrl">
+
+		<!-- Container #1 (see wireframe) -->
+		<md-toolbar layout="row" class="md-toolbar-tools">
+			<md-button class="menu md-icon-button" hide-gt-sm aria-label="" ng-click="toggleSideNav()">
+				<i class="material-icons">menu</i>
+			</md-button>
+			<h1>Browse</h1>
+		</md-toolbar>
+
+			<!-- Container #2 -->
+		<div flex layout="row">
+			<!-- Container #3 -->
+			<md-sidenav class="md-whiteframe-2dp" md-component-id="left">
+				<md-toolbar class="md-theme-indigo">
+					<h1 class="md-toolbar-tools">AI Browser</h1>
+				</md-toolbar>
+				<md-content layout-padding>
+					<md-list layout="column">
+  						<md-list-item flex>
+							<md-button ui-sref="browser">
+								<md-icon class"avatar" md-font-set="material-icons">lightbulb_outline</md-icon>
+								Browse
+							</md-button>
+						</md-list-item>
+						<md-list-item flex>
+							<md-button ui-sref="train" layout="row" layout-align="center center">
+								<md-icon class"avatar" md-font-set="material-icons">code</md-icon>
+								<!-- <i class="material-icons">code</i> -->
+								Train
+							</md-button>
+						</md-list-item>
+					</md-list>
+					<p show-gt-md>
+
+					</p>
+				</md-content>
+			</md-sidenav>
+
+			<!-- Container #4 -->
+			<md-content flex id="content">
+				<!-- <h1>AI Browser</h1> -->
+				<ui-view></ui-view>
+			</md-content>
+
+		</div>
 	</body>
 </html>

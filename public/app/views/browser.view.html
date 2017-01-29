@@ -1,0 +1,36 @@
+<md-content layout-padding layout="column" layout-align="center center">
+	<div layout="row">
+		<div layout="column" layout-align="center center">
+
+			<h1>Let's get started!</h1>
+			<div layout="row">
+				<md-input-container style="width:350px;">
+					<label>AI Action</label>
+					<input ng-model="query" class="md-block">
+				</md-input-container>
+				<md-button ng-click="">
+					Interpret
+				</md-button>
+			</div>
+		</div>
+	</div>
+	<div layout="row" layout-align="space-around center" style="width:90%;">
+		<div layout="column" layout-align="center center">
+			<md-button class="md-fab" aria-label="Eat cake">
+				<md-icon class"avatar md-raised" md-font-set="material-icons">mic_none</md-icon>
+			</md-button>
+			One Time Request
+		</div>
+		<div layout="column" layout-align="center center">
+			<md-button class="md-fab" aria-label="Eat cake">
+				<md-icon class"avatar md-raised" md-font-set="material-icons">mic</md-icon>
+			</md-button>
+			Start Continuous
+		</div>
+		<!-- <div layout="column" layout-align="center center">
+			<md-switch ng-model="continuous" aria-label="Continuous Input">
+				Continuous Mode
+			</md-switch>
+		</div> -->
+	</div>
+</md-content>
