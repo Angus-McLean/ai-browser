@@ -16,7 +16,7 @@
 				controller : 'browserCtrl'
 			})
 			.state('train', {
-				display : 'Train',
+				display : 'Trainer',
 				url: '/train',
 				templateUrl: '/public/app/views/train.view.html',
 				controller : 'trainCtrl'

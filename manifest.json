@@ -8,7 +8,16 @@
 	},
 	"background": {
 		"scripts": [
-			"/background/index.js"
+			"/bower_components/lodash/dist/lodash.js",
+			"/bower_components/fuse.js/src/fuse.js",
+			"/libs/websites.js",
+			"/libs/resampler.js",
+			"/libs/speex.js",
+			"/libs/nuance.js",
+			"/libs/mix_nlu.js",
+			"/actions/nuance.api.js",
+			"/actions/globalized.background.js",
+			"/background/background.js"
 		]
 	},
 	"content_scripts": [
@@ -26,6 +35,7 @@
 	"web_accessible_resources": [
 
 	],
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
 	"browser_action": {
 		"default_title": "Buzify",
 		"default_popup": "public/index.html"

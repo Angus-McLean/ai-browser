@@ -13,11 +13,14 @@
 		<script src="/bower_components/angular-material/angular-material.js"></script>
 		<script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 
+		<script src="/actions/nuance.models.js" charset="utf-8"></script>
+
 		<script src="/public/app/app.module.js" charset="utf-8"></script>
 		<script src="/public/app/app.router.js" charset="utf-8"></script>
 		<script src="/public/app/app.controller.js" charset="utf-8"></script>
 		<script src="/public/app/controllers/browser.controller.js" charset="utf-8"></script>
 		<script src="/public/app/controllers/train.controller.js" charset="utf-8"></script>
+		<script src="/public/app/services/ChromeMessage.service.js" charset="utf-8"></script>
 	</head>
 	<body ng-cloak layout="column" ng-app="app" ng-controller="mainCtrl">
 
@@ -26,7 +29,7 @@
 			<md-button class="menu md-icon-button" hide-gt-sm aria-label="" ng-click="toggleSideNav()">
 				<i class="material-icons">menu</i>
 			</md-button>
-			<h1>Browse</h1>
+			<h1>{{$state.current.display}}</h1>
 		</md-toolbar>
 
 			<!-- Container #2 -->
