@@ -3,7 +3,7 @@ var DEMO_RUNNING = false;
 
 	var events_log = [];
 
-	var relevantProps = ['type', 'which', 'x', 'y', 'target']
+	var relevantProps = ['type', 'which', 'x', 'y', 'target', 'altKey', 'metaKey', 'shiftKey']
 
 	document.addEventListener('click', trackEvent)
 	document.addEventListener('keypress', trackEvent)
@@ -12,6 +12,7 @@ var DEMO_RUNNING = false;
 		if (DEMO_RUNNING) {
 			var info = _.pick(ev, relevantProps);
 			info.path = fullPath(info.target);
+			info.origin = window.location.origin;
 			delete info.target;
 			events_log.push(info);
 		}
